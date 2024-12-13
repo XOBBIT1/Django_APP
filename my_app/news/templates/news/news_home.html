@@ -7,12 +7,12 @@
 {% block content %}
     <div class="features">
         <h1>Новости и акции!</h1>
-        <p>Мы скоро здесь появимся! Спасибо за интерес к нашему проекту.
-            Сейчас мы активно работаем над запуском, чтобы предложить вам лучшее.
-            Пожалуйста, загляните чуть позже — нас ждут большие открытия!
-            Если у вас есть вопросы, пишите нам на email@example.com, и мы обязательно ответим.
-            Скоро увидимся!
-        </p>
-        <button class="btn  btn-dark">Перейти на страницу про нас!</button>
+        {% for el in news %}
+            <div class="card text-white bg-dark mb-3">
+                <h3>{{el.title}}</h3>
+                <p>{{el.description}}</p>
+                 <a href="{% url 'news_details' el.id %}" class="btn  btn-warning">Перейти на страницу Скидки!</a>
+            </div>
+         {% endfor %}
     </div>
 {% endblock %}
