@@ -12,6 +12,9 @@ python-dotenv = "*"
 psycopg2 = "*"
 asgiref = "*"
 sqlparse = "*"
+drf-spectacular = "*"
+django-rest-swagger = "*"
+django-filter = "*"
 
 [dev-packages]
 
